@@ -11,6 +11,7 @@ app.get('/about', function(req, res) {
 	res.render('about');
 });
 
-app.listen(3000, function() {
-	console.log('Deployment demo application is running on port 3000.');
+var port = process.env.PORT;
+app.listen(port, function() {
+	console.log('Deployment demo application is running on port ' + port);
 });
